@@ -12,6 +12,10 @@ class Pub:
         if self.of_drinking_age(age):
             self.till += price
             
-    
+    def refuse_service(self, customer):
+        if customer.drunkenness > 10:
+            return "Time to go home."
+        else:
+            return "Would you like another?"
 
 

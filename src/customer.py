@@ -12,4 +12,9 @@ class Customer:
     def increase_drunkenness(self, drink):
         self.drunkenness += drink
 
+    def too_drunk(self):
+        if self.drunkenness >= 10:
+            return True
+        
+    
 

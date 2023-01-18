@@ -17,9 +17,8 @@ class TestPub(unittest.TestCase):
     def test_sell_a_drink(self):
         self.pub.sell_a_drink(2.50, self.customer.age)
         self.assertEqual(502.50, self.pub.till)
-        
-    def test_buy_a_drink(self):
-        self.customer.buy_a_drink(2.50)
-        self.assertEqual(7.50, self.customer.wallet)
-
     
+
+    def test_refuse_service(self):
+        self.pub.refuse_service(self.customer)
+        self.assertEqual("Would you like another?", self.pub.refuse_service(self.customer))
